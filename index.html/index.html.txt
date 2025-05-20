@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Arduino Blockly</title>
+  <script src="blockly/blockly.min.js"></script>
+  <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+  <h1>Blockly for Arduino</h1>
+  
+  <!-- Blockly Workspace -->
+  <div id="blocklyDiv" style="height: 400px; width: 100%;"></div>
+
+  <!-- Toolbox (menu of blocks) -->
+  <xml id="toolbox" style="display: none">
+    <block type="digital_write"></block>
+  </xml>
+
+  <!-- Button and code output -->
+  <button onclick="generateCode()">Generate Arduino Code</button>
+  <pre id="codeArea"></pre>
+
+  <script src="blocks/custom_blocks.js"></script>
+  <script src="generators/arduino.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
